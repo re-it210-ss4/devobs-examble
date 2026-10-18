@@ -41,27 +41,27 @@ devops-final-de003-nguyenvana/     ← Mã nguồn Spring Boot 4 (Java 21, Gradl
 
 Phần **sinh viên phải làm** (xem đề thi):
 
-| File | Việc cần làm |
-|------|--------------|
-| `student.env` | Điền thông tin sinh viên và thông số triển khai |
-| `Dockerfile` | **Hoàn chỉnh**: multi-stage build, stage `build` (Gradle + JDK 21) và stage runtime (JRE 21) |
-| `docker-compose.yml` | **Điền các TODO 1–5** (service `mysql` đã có sẵn) |
-| `.github/workflows/ci-cd.yml` | **Điền các TODO 1–6** của pipeline build → push image → deploy |
-| `screenshots/` | `01-actions.png`, `02-ghcr.png`, `03-compose-ps.png`, `04-website.png` |
+| File                          | Việc cần làm                                                                                 |
+| ----------------------------- | -------------------------------------------------------------------------------------------- |
+| `student.env`                 | Điền thông tin sinh viên và thông số triển khai                                              |
+| `Dockerfile`                  | **Hoàn chỉnh**: multi-stage build, stage `build` (Gradle + JDK 21) và stage runtime (JRE 21) |
+| `docker-compose.yml`          | **Điền các TODO 1–5** (service `mysql` đã có sẵn)                                            |
+| `.github/workflows/ci-cd.yml` | **Điền các TODO 1–6** của pipeline build → push image → deploy                               |
+| `screenshots/`                | `01-actions.png`, `02-ghcr.png`, `03-compose-ps.png`, `04-website.png`                       |
 
 ## API của ứng dụng
 
-| Method | Đường dẫn | Mô tả |
-|--------|-----------|-------|
-| GET | `/api/tasks` | Danh sách công việc |
+| Method | Đường dẫn    | Mô tả               |
+| ------ | ------------ | ------------------- |
+| GET    | `/api/tasks` | Danh sách công việc |
 
 ## Biến môi trường mà ứng dụng cần
 
-| Biến | Ý nghĩa |
-|------|---------|
-| `DB_HOST`, `DB_PORT` | Địa chỉ MySQL (mặc định `mysql`, `3306`) |
-| `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Database và tài khoản kết nối |
-| `APP_VERSION` | Phiên bản (truyền vào lúc build image, ví dụ commit SHA) |
+| Biến                                | Ý nghĩa                                                  |
+| ----------------------------------- | -------------------------------------------------------- |
+| `DB_HOST`, `DB_PORT`                | Địa chỉ MySQL (mặc định `mysql`, `3306`)                 |
+| `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Database và tài khoản kết nối                            |
+| `APP_VERSION`                       | Phiên bản (truyền vào lúc build image, ví dụ commit SHA) |
 
 ## Chạy thử (khi đã hoàn thiện Dockerfile và docker-compose.yml)
 
@@ -71,3 +71,5 @@ docker compose --env-file student.env ps
 curl http://localhost:<APP_PORT>/api/tasks
 docker compose --env-file student.env down
 ```
+
+o
