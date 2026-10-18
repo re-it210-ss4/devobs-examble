@@ -38,10 +38,4 @@ EXPOSE 8080
 # ENTRYPOINT dạng exec (mảng JSON)
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
-Run entrypoint.sh
-  Will download drone-ssh-1.8.0-linux-amd64 from https://github.com/appleboy/drone-ssh/releases/download/v1.8.0
-  ======= CLI Version =======
-  Drone SSH version 1.8.0
-  ===========================
-  2026/10/16 04:40:48 ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain
-  Error: Process completed with exit code 1. \
+
